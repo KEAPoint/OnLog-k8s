@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onlog-image-recommendation-server-deployment
+  labels:
+    app: onlog-image-recommendation
+    tier: backend
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: onlog-image-recommendation
+      tier: backend
+
+  template:
+    metadata:
+      labels:
+        app: onlog-image-recommendation
+        tier: backend
+        
+    spec:
+      containers:
+      - name: image-recommendation-server
+        image: 629515838455.dkr.ecr.us-east-1.amazonaws.com/kea-004-onlog-image-recommendation-server:latest
+        ports:
+        - containerPort: 80
