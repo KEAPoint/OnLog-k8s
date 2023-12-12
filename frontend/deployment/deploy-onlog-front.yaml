@@ -23,10 +23,16 @@ spec:
         image: 629515838455.dkr.ecr.us-east-1.amazonaws.com/kea-004-onlog-front:latest
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            cpu: "500m"
       - name: nginx
         image: nginx:alpine
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "500m"
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
@@ -35,3 +41,4 @@ spec:
       - name: nginx-conf
         configMap:
           name: nginx-conf
+          
