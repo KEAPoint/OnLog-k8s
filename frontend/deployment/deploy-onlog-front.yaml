@@ -25,14 +25,14 @@ spec:
         - containerPort: 3000
         resources:
           requests:
-            cpu: "500m"
+            cpu: "100m"
       - name: nginx
         image: nginx:alpine
         ports:
         - containerPort: 80
         resources:
           requests:
-            cpu: "500m"
+            cpu: "100m"
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
@@ -41,4 +41,3 @@ spec:
       - name: nginx-conf
         configMap:
           name: nginx-conf
-          
