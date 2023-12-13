@@ -15,17 +15,17 @@ spec:
 
   # Scale할 조건
   metrics:
-  # CPU 사용률이 50%를 초과 시 Pod 증가
+  # CPU 사용률이 60%를 초과 시 Pod 증가
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
         averageUtilization: 60
-  # Memory 사용률이 60%를 초과 시 Pod 증가
-  - type: Resource
-    resource:
-      name: memory
-      target:
-        type: Utilization
-        averageUtilization: 65
+  # Memory 사용률이 65%를 초과 시 Pod 증가
+  # - type: Resource
+  #   resource:
+  #     name: memory
+  #     target:
+  #       type: Utilization
+  #       averageUtilization: 65
