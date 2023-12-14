@@ -22,6 +22,6 @@ spec:
     spec:
       containers:
       - name: image-recommendation-server
-        image: 629515838455.dkr.ecr.us-east-1.amazonaws.com/kea-004-onlog-image-recommendation-server:4
+        image: 629515838455.dkr.ecr.us-east-1.amazonaws.com/kea-004-onlog-image-recommendation-server:8
         ports:
         - containerPort: 80
