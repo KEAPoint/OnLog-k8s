@@ -18,12 +18,11 @@ spec:
       labels:
         app: onlog-blog-server
         tier: backend
+        common: onlog
 
     spec:
       containers:
       - name: blog-server
         image: 629515838455.dkr.ecr.us-east-1.amazonaws.com/kea-004-onlog-blog-server:47
         ports:
-        - containerPort: 8080
-
-
+        - containerPort: 80

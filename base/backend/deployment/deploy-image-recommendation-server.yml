@@ -18,6 +18,7 @@ spec:
       labels:
         app: onlog-image-recommendation
         tier: backend
+        common: onlog
         
     spec:
       containers:

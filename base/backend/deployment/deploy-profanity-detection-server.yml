@@ -18,10 +18,11 @@ spec:
       labels:
         app: onlog-profanity-detection-server
         tier: backend
-        
+        common: onlog
+
     spec:
       containers:
       - name: profanity-detection-server
         image: kidevelop/appropriate-filetering
         ports:
-        - containerPort: 8090
+        - containerPort: 80
