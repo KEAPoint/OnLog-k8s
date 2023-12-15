@@ -8,6 +8,7 @@ metadata:
     tier: frontend
 spec:
   replicas: 3
+  revisionHistoryLimit: 6
   selector:
     matchLabels:
       app: onlog-front
